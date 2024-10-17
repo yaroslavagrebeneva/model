@@ -1,3 +1,14 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<% layout('./layout/page.ejs') %>
+
+
+<% if (error.status === 404) { %>
+  <div style="text-align: center;">
+    <h1><%= title %></h1>
+    <img src="/images/404.jpg" alt="Page Not Found" style="max-width: 75%; height: auto;">
+    <h2>Oops! Page Not Found</h2>
+    <p>The page you're looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+  </div>
+<% } else { %>
+  <h2>Error <%= error.status %></h2>
+  <pre><%= error.stack %></pre>
+<% } %>

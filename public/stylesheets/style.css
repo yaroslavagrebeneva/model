@@ -2,12 +2,11 @@ body {
   padding: 40px;
   font: 20px "Didot", "Bodoni MT", "Times New Roman", serif;
   background-color: #F9F9F9; /* Светлый фон для изысканного стиля */
-  color: #333; /* Темный текст для контраста */
   line-height: 1.6;
   letter-spacing: 0.5px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1{
   font-family: "Didot", "Bodoni MT", "Times New Roman", serif;
   font-weight: 600;
   letter-spacing: 2px; /* Элегантный межбуквенный интервал */
@@ -15,6 +14,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
+h4{
+   font-family: "Didot";
+   font-weight: 400;
+   letter-spacing: 2px;
+   color: black;
+}
 a {
   color: #00B7FF;
   text-decoration: none;
