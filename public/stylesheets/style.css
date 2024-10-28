@@ -1,8 +1,41 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 40px;
+  font: 20px "Didot", "Bodoni MT", "Times New Roman", serif;
+  background-color: #F9F9F9; /* Светлый фон для изысканного стиля */
+  line-height: 1.6;
+  letter-spacing: 0.5px;
 }
 
+h1{
+  font-family: "Didot", "Bodoni MT", "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: 2px; /* Элегантный межбуквенный интервал */
+  text-transform: uppercase; /* Капитализация заголовков для стиля модного журнала */
+  margin-bottom: 20px;
+}
+
+h3{
+   font-family: "Didot";
+   font-weight: 400;
+   letter-spacing: 2px;
+   color: black;
+}
 a {
   color: #00B7FF;
+  text-decoration: none;
+  border-bottom: 2px solid transparent; /* Эффект подчеркивания */
+  transition: all 0.3s ease; /* Плавный переход для ссылок */
 }
+
+a:hover {
+  border-bottom: 2px solid #00B7FF; /* Подчеркивание при наведении */
+  color: #005577;
+}
+
+.model-desc {
+  font-size: 18px;
+  font-style: italic; /* Курсив для описаний моделей */
+  line-height: 1.8;
+  color: #555; /* Более светлый текст для описаний */
+}
+
