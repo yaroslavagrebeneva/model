@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // view engine setup
+app.engine('ejs',require('ejs-locals'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -22,20 +23,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-// catch 404 and forward to error handler
+
+// обработка 404 ошибки и перенаправление на обработчик
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// error handler
+// обработчик ошибок
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
+  // устанавливаем локальные переменные, только вывод ошибки в разработке
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
+  // рендерим страницу ошибки
   res.status(err.status || 500);
-  res.render('error');
+  
+  // передаем заголовок "Model" и рендерим шаблон error.ejs
+  res.render('error', { title: 'Error Page' });
 });
 
 module.exports = app;
