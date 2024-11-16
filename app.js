@@ -32,8 +32,11 @@ app.use('/models', models);
 
 
 // обработка 404 ошибки и перенаправление на обработчик
+// Обработчик 404 ошибки
 app.use(function(req, res, next) {
-  next(createError(404));
+  var err = new Error('Страница не найдена');
+  err.status = 404;
+  next(err);
 });
 
 // обработчик ошибок
