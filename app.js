@@ -9,6 +9,8 @@ mongoose.connect('mongodb://localhost/model2024');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var models = require('./routes/models');
+
 
 var app = express();
 
@@ -25,6 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/models', models);
+
 
 
 // обработка 404 ошибки и перенаправление на обработчик
