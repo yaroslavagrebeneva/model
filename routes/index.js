@@ -15,29 +15,12 @@ router.get('/logreg', function(req, res, next) {
   });
   
    /* POST login/registration page. */
-   router.post('/logreg', async function(req, res, next) {
-    var username = req.body.username
+router.post('/logreg', function(req, res, next) {
+  var username = req.body.username
   var password = req.body.password
   console.log(username);
   console.log(password);
-  var users = await User.find({username: username});
-   console.log(users);
-   if (!users.length) {
-    //res.send("<h1>Пользователь НЕ найден</h1>");
-    var user = new User({username:username,password:password})
-        await user.save();
-        req.session.user_id = user._id;
-        res.redirect('/');
-   } else {
-    //res.send("<h1>Пользователь найден</h1>");
-      var foundUser = users[0];
-      if(foundUser.checkPassword(password)){
-        req.session.user_id = foundUser._id
-        res.redirect('/')
-      } else {
-        res.render('logreg',{title: 'Вход'});
-      }
-   }
-});
+  });
+  
 
 module.exports = router;
