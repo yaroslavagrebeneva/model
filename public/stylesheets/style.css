@@ -1,25 +1,31 @@
+/* Основной фон и шрифты */
 body {
   padding: 40px;
   font: 20px "Didot", "Bodoni MT", "Times New Roman", serif;
   background-color: #F9F9F9; /* Светлый фон для изысканного стиля */
   line-height: 1.6;
   letter-spacing: 0.5px;
+  color: #333; /* Темный текст для читаемости */
 }
 
-h1{
+/* Заголовки */
+h1 {
   font-family: "Didot", "Bodoni MT", "Times New Roman", serif;
   font-weight: 600;
-  letter-spacing: 2px; /* Элегантный межбуквенный интервал */
+  letter-spacing: 2px;
   text-transform: uppercase; /* Капитализация заголовков для стиля модного журнала */
   margin-bottom: 20px;
+  color: #333; /* Цвет заголовка */
 }
 
-h3{
-   font-family: "Didot";
-   font-weight: 400;
-   letter-spacing: 2px;
-   color: black;
+h3 {
+  font-family: "Didot", "Bodoni MT", "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: black;
 }
+
+/* Ссылки */
 a {
   color: #00B7FF;
   text-decoration: none;
@@ -32,10 +38,101 @@ a:hover {
   color: #005577;
 }
 
+/* Описание моделей */
 .model-desc {
   font-size: 18px;
-  font-style: italic; /* Курсив для описаний моделей */
+  font-style: italic;
   line-height: 1.8;
   color: #555; /* Более светлый текст для описаний */
 }
 
+/* Основной контейнер */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Оформление формы */
+form {
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.input-group input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #530000;
+  outline: none;
+}
+
+.btn {
+  background-color: #202020;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #960202;
+}
+
+.form-group .col-sm-5 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form-group .col-sm-offset-1 {
+  padding-left: 0;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #520303;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #c05252;
+}
+
+/* Отступы и другие улучшения */
+p {
+  font-size: 20px;
+  margin-top: 5px;
+  color: #000000;
+  font-family: "Didot", "Bodoni MT", "Times New Roman", serif;
+  letter-spacing: 1px;
+
+}
+
+br {
+  margin-bottom: 20px;
+}
