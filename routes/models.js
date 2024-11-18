@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Model = require('../models/model').Model;
+var checkAuth = require("../middlewares/checkAuth.js");
 
 /* GET models listing. */
 router.get('/', function(req, res, next) {
@@ -8,7 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* Страница модели */
-router.get("/:nick", async function(req, res, next) {
+router.get("/:nick", checkAuth, async function(req, res, next) {
     try {
         var models = await Model.find({ nick: req.params.nick });
         console.log(models);
