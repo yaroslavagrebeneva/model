@@ -28,7 +28,8 @@ router.get('/logreg', function(req, res, next) {
         await user.save();
         req.session.user_id = user._id;
         res.redirect('/');
-   } else {
+   } else 
+   {
     //res.send("<h1>Пользователь найден</h1>");
       var foundUser = users[0];
       if(foundUser.checkPassword(password)){
