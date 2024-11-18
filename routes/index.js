@@ -4,7 +4,8 @@ var router = express.Router();
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
-  res.cookie('greeting', 'Hi!!!').render('index', { title: 'Express', picture: "images/welcome.jpg"});
+  req.session.greeting = "Hi!!!";
+  res.render('index', { title: 'Express', picture: "images/welcome.jpg"});
 });
 
 
