@@ -1,8 +1,12 @@
 <% layout('./layout/page.ejs') %>
-
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <p>Counter: <%= counter %></p>
-    <p>This project about such models like : Bella Hadid, Irina Shayk, Naomi Campbell</p>
-    <img src="<%= picture %>" alt=""/>
+<% if(user) {%>
+<h1>Привет, <%= user.username %></h1>
+<% }else{ %>
+<h1>Привет,незалогиненный пользователь</h1>
+<% } %>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+<p>Counter: <%= counter %></p>
+<p>This project about such models like : Bella Hadid, Irina Shayk, Naomi Campbell</p>
+<img src="<%= picture %>" alt=""/>
 
